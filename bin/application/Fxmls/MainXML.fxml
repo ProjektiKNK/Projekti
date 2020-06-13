@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="872.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controllers.MainController">
+   <children>
+      <AnchorPane prefHeight="649.0" prefWidth="215.0">
+         <children>
+            <ImageView fitHeight="571.0" fitWidth="234.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@..\..\images\fotobackground.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="47.0" layoutY="145.0" text="Studentët" textFill="WHITE" AnchorPane.bottomAnchor="479.80000000000007" AnchorPane.leftAnchor="47.0" AnchorPane.rightAnchor="117.80000000000001" AnchorPane.topAnchor="144.99999999999997">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="registerStudents1" layoutX="88.0" layoutY="177.0" text="Regjistro" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="searchStudents1" layoutX="88.0" layoutY="229.0" text="Kërko/Edito" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="reportStudents1" layoutX="54.0" layoutY="278.0" text="Raporte" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="semesterStudents1" layoutX="56.0" layoutY="334.0" text="Semestri" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="registerSemester1" layoutX="84.0" layoutY="374.0" text="Regjistro Semestrin" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="34.0" fitWidth="28.0" layoutX="14.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="460.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="193.6" AnchorPane.topAnchor="145.0">
+               <image>
+                  <Image url="@..\..\images\userimg2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="34.0" fitWidth="33.0" layoutX="43.0" layoutY="174.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@..\..\images\adduser.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="34.0" fitWidth="33.0" layoutX="46.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@..\..\images\search2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="39.0" layoutX="14.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@..\..\images\University.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="34.0" fitWidth="35.0" layoutX="46.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@..\..\images\money.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="34.0" fitWidth="39.0" layoutX="11.0" layoutY="274.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@..\..\images\document2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="191.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="460.0" AnchorPane.leftAnchor="193.6" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="145.0">
+               <image>
+                  <Image url="@..\..\images\expand.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="191.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@..\..\images\expand.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="contact1" fitHeight="42.0" fitWidth="30.0" layoutX="14.0" layoutY="605.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@..\..\images\Phone.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="settingsHelp1" fitHeight="42.0" fitWidth="30.0" layoutX="191.0" layoutY="605.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@..\..\images\Settings.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="sendMessage1" fitHeight="42.0" fitWidth="30.0" layoutX="107.0" layoutY="605.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@..\..\images\message2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="42.0" fitWidth="30.0" layoutX="13.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="476.79999999999995" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="192.4" AnchorPane.topAnchor="80.0">
+               <image>
+                  <Image url="@..\..\images\Menu.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="62.0" layoutY="26.0" text="SBMS/PAGE" textFill="#3583ff">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="34.0" fitWidth="30.0" layoutX="193.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="540.4" AnchorPane.leftAnchor="193.0" AnchorPane.rightAnchor="15.400000000000006" AnchorPane.topAnchor="80.0">
+               <image>
+                  <Image url="@..\..\images\Lock.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="34.0" fitWidth="36.0" layoutX="10.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@..\..\images\User_24px.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="editmyProfile1" layoutX="54.0" layoutY="431.0" onMouseClicked="#onMouseClickedMainLeft" text="Edito Profilin" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="237.0" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="649.0" minWidth="634.0" prefHeight="649.0" prefWidth="634.0">
+         <children>
+            <ImageView fitHeight="130.0" fitWidth="130.0" layoutX="47.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/userphoto.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="130.0" fitWidth="130.0" layoutX="262.0" layoutY="406.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@..\..\images\folder.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="130.0" fitWidth="130.0" layoutX="467.0" layoutY="406.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@..\..\images\message.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="202.0" layoutY="45.0" text="Sistemi për Menaxhimin e Studentëve">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="91.0" fitWidth="117.0" layoutX="61.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@..\..\images\training.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="130.0" fitWidth="130.0" layoutX="254.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/phone%20(1).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="130.0" fitWidth="130.0" layoutX="467.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@..\..\images\document.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="130.0" fitWidth="130.0" layoutX="47.0" layoutY="406.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@..\..\images\search.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="registerStudentsmain1" layoutX="52.0" layoutY="324.0" text="Regjistro Studentet">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="contactMain1" layoutX="285.0" layoutY="324.0" text="Kontaktoni">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="ReportStudentsMain1" layoutX="463.0" layoutY="324.0" text="Raporte te Studenteve">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="searchStudentsMain1" layoutX="43.0" layoutY="569.0" text="Kerko/Edito Studentet">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="registerSemesterMain1" layoutX="267.0" layoutY="569.0" text="Regjistro Semestrin">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="sendMessageMain1" layoutX="487.0" layoutY="569.0" text="Dergo Mesazh">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
