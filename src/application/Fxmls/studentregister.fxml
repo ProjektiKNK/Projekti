@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="635.0" prefWidth="867.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RegisterController">
+   <children>
+      <AnchorPane layoutY="-1.0" prefHeight="638.0" prefWidth="235.0">
+         <children>
+            <ImageView fitHeight="571.0" fitWidth="234.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/fotobackground.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="47.0" layoutY="132.0" text="Studentët" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="registerStudents" layoutX="88.0" layoutY="164.0" text="Regjistro" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="searchStudents" layoutX="88.0" layoutY="216.0" text="Kërko/Edito" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="reportStudents" layoutX="54.0" layoutY="265.0" text="Raporte" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="semesterStudents" layoutX="56.0" layoutY="321.0" text="Semestri" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="registerSemester" layoutX="84.0" layoutY="361.0" text="Regjistro Semestrin" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="34.0" fitWidth="28.0" layoutX="14.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/userimg2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="34.0" fitWidth="33.0" layoutX="43.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/adduser.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="34.0" fitWidth="33.0" layoutX="46.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/search2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="39.0" layoutX="14.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/University.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="34.0" fitWidth="39.0" layoutX="11.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/document2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="191.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/expand.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="191.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/expand.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="contact" fitHeight="42.0" fitWidth="30.0" layoutX="14.0" layoutY="592.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Phone.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="settingsHelp" fitHeight="42.0" fitWidth="30.0" layoutX="191.0" layoutY="592.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Settings.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="sendMessage" fitHeight="42.0" fitWidth="30.0" layoutX="107.0" layoutY="592.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/message2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="42.0" fitWidth="30.0" layoutX="13.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Menu.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="66.0" layoutY="25.0" text="SBMS/PAGE" textFill="#3583ff">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="34.0" fitWidth="30.0" layoutX="193.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Lock.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="editmyProfile" layoutX="54.0" layoutY="418.0" text="Edito Profilin" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="34.0" fitWidth="36.0" layoutX="12.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/User_24px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="242.0" layoutY="3.0" prefHeight="630.0" prefWidth="630.0">
+         <children>
+            <GridPane layoutX="6.0" layoutY="255.0" prefHeight="104.0" prefWidth="617.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="149.6666259765625" minWidth="10.0" prefWidth="85.33333333333333" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="283.0" minWidth="10.0" prefWidth="186.66666666666669" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.3333231608073" minWidth="10.0" prefWidth="135.99997965494794" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="249.33333333333337" minWidth="10.0" prefWidth="227.33333333333337" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label alignment="TOP_RIGHT" prefHeight="16.0" prefWidth="68.0" text="Shteti:">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_RIGHT" prefHeight="18.0" prefWidth="67.0" text="Adresa:" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_RIGHT" prefHeight="16.0" prefWidth="68.0" text="Email:" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_RIGHT" prefHeight="16.0" prefWidth="110.0" text="Qyteti:" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_RIGHT" prefHeight="16.0" prefWidth="110.0" text="Tel:" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="shtetiBox" prefHeight="28.0" prefWidth="207.0" GridPane.columnIndex="1" />
+                  <TextField prefHeight="30.0" prefWidth="207.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField prefHeight="30.0" prefWidth="207.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <ChoiceBox fx:id="qytetiBox" prefHeight="28.0" prefWidth="207.0" GridPane.columnIndex="3" />
+                  <TextField prefHeight="30.0" prefWidth="207.0" promptText="+383-##-###-###" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets right="15.0" />
+                     </GridPane.margin>
+                  </TextField>
+               </children>
+            </GridPane>
+            <GridPane layoutY="417.0" prefHeight="138.0" prefWidth="399.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.66665649414062" minWidth="10.0" prefWidth="85.33334350585938" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="323.33331298828125" minWidth="10.0" prefWidth="313.3333231608073" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label alignment="TOP_RIGHT" layoutX="18.0" prefHeight="18.0" prefWidth="68.0" text="Fakulteti:">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_RIGHT" prefHeight="16.0" prefWidth="68.0" text="Drejtimi:" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_RIGHT" prefHeight="16.0" prefWidth="68.0" text="Niveli:" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_RIGHT" prefHeight="16.0" prefWidth="68.0" text="Statusi:" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="fakultetiBox" prefHeight="28.0" prefWidth="345.0" GridPane.columnIndex="1" />
+                  <ChoiceBox fx:id="drejtimiBox" prefHeight="28.0" prefWidth="345.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <ChoiceBox fx:id="niveliBox" prefHeight="28.0" prefWidth="345.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <RadioButton mnemonicParsing="false" prefHeight="30.0" prefWidth="105.0" selected="true" text="I/E rregullt">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="statusi" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="30.0" prefWidth="124.0" text="Me korrospodencë" toggleGroup="$statusi">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+            <GridPane layoutX="6.0" layoutY="92.0" prefHeight="111.0" prefWidth="588.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.33331298828125" minWidth="10.0" prefWidth="80.3333231608073" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="303.99999999999994" minWidth="10.0" prefWidth="184.33334350585938" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.3333231608073" minWidth="0.0" prefWidth="135.99997965494794" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="270.00004069010413" minWidth="10.0" prefWidth="200.00002034505212" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="48.00000762939453" minHeight="10.0" prefHeight="36.66667175292969" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="50.66666158040364" minHeight="10.0" prefHeight="50.66666158040364" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="31.333328247070305" minHeight="10.0" prefHeight="31.333328247070305" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label alignment="TOP_RIGHT" prefHeight="16.0" prefWidth="67.0" text="Emri:">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_RIGHT" prefHeight="16.0" prefWidth="67.0" text="Emri i Prindit:" textAlignment="RIGHT" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_RIGHT" prefHeight="16.0" prefWidth="67.0" text="Ditëlindja:" textAlignment="RIGHT" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_RIGHT" prefHeight="18.0" prefWidth="111.0" text="Mbiemri:" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_RIGHT" prefHeight="16.0" prefWidth="111.0" text="Nr.Personal:" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_RIGHT" prefHeight="16.0" prefWidth="110.0" text="Gjinia:" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <children>
+                        <RadioButton mnemonicParsing="false" prefHeight="29.0" prefWidth="94.0" selected="true" text="Mashkull">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="gender" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" prefHeight="29.0" prefWidth="105.0" text="Femer" toggleGroup="$gender">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </HBox>
+                  <TextField prefHeight="30.0" prefWidth="207.0" GridPane.columnIndex="1" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField prefHeight="30.0" prefWidth="215.0" GridPane.columnIndex="3" />
+                  <TextField prefHeight="30.0" prefWidth="207.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <DatePicker prefHeight="26.0" prefWidth="207.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <Button layoutX="466.0" layoutY="574.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="96.0" text="Zgjedh" />
+            <Button layoutX="180.0" layoutY="573.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="135.0" text="Regjistro Studentët" />
+            <ImageView fitHeight="138.0" fitWidth="166.0" layoutX="445.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Female_100px.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="-6.0" layoutY="40.0" prefHeight="30.0" prefWidth="630.0" style="-fx-background-color: #ccd9ff;">
+               <children>
+                  <Label layoutX="259.0" layoutY="-2.0" prefHeight="31.0" prefWidth="111.0" text="Informatat Bazike" textFill="#2a68ec">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="20.0" fitWidth="28.0" layoutX="232.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Name_25px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="-7.0" layoutY="215.0" prefHeight="30.0" prefWidth="630.0" style="-fx-background-color: #ccd9ff;">
+               <children>
+                  <Label layoutX="259.0" layoutY="-2.0" prefHeight="31.0" prefWidth="138.0" text="Informatat Kontaktuese" textFill="#2a68ec">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="20.0" fitWidth="28.0" layoutX="232.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Country_25px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="-7.0" layoutY="376.0" prefHeight="30.0" prefWidth="630.0" style="-fx-background-color: #ccd9ff;">
+               <children>
+                  <Label layoutX="259.0" layoutY="-2.0" prefHeight="31.0" prefWidth="186.0" text="Informatat Administrative" textFill="#2a68ec">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="20.0" fitWidth="28.0" layoutX="232.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/University_25px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="-1.0" layoutY="-3.0" prefHeight="43.0" prefWidth="633.0">
+               <children>
+                  <Label layoutX="217.0" layoutY="6.0" text="Regjistro Studentet">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
