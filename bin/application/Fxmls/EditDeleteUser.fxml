@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="649.0" prefWidth="861.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller">
+   <children>
+      <AnchorPane layoutY="-1.0" prefHeight="638.0" prefWidth="235.0">
+         <children>
+            <ImageView fitHeight="670.0" fitWidth="242.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/fotobackground.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="47.0" layoutY="132.0" text="Studentët" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="registerStudents" layoutX="88.0" layoutY="164.0" text="Regjistro" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="searchStudents" layoutX="88.0" layoutY="216.0" text="Kërko/Edito" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="reportStudents" layoutX="54.0" layoutY="265.0" text="Raporte" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="semesterStudents" layoutX="56.0" layoutY="321.0" text="Semestri" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="registerSemester" layoutX="84.0" layoutY="361.0" text="Regjistro Semestrin" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="34.0" fitWidth="28.0" layoutX="14.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/userimg2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="34.0" fitWidth="33.0" layoutX="43.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/adduser.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="34.0" fitWidth="33.0" layoutX="46.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/search2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="39.0" layoutX="14.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/University.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="34.0" fitWidth="39.0" layoutX="11.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/document2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="191.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/expand.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="191.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/expand.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="contact" fitHeight="42.0" fitWidth="30.0" layoutX="14.0" layoutY="592.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Phone.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="settingsHelp" fitHeight="42.0" fitWidth="30.0" layoutX="191.0" layoutY="592.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Settings.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="sendMessage" fitHeight="42.0" fitWidth="30.0" layoutX="107.0" layoutY="592.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/message2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="42.0" fitWidth="30.0" layoutX="13.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Menu.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="66.0" layoutY="25.0" text="SBMS/PAGE" textFill="#3583ff">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="34.0" fitWidth="30.0" layoutX="193.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Lock.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="editmyProfile" layoutX="54.0" layoutY="418.0" text="Edito Profilin" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="34.0" fitWidth="36.0" layoutX="12.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/User_24px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Text layoutX="359.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menyra:">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+      </Text>
+      
+
+      <Text layoutX="358.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter:">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+      </Text>
+      <fx:define>
+   <Image fx:id="btnImage" url="@../images/images.png" />
+</fx:define>
+      <TextField layoutX="494.0" layoutY="152.0" prefHeight="26.3" prefWidth="124.0" />
+      
+      <ScrollPane layoutX="262.0" layoutY="225.0" prefHeight="282.0" prefWidth="578.0" />
+      <Button layoutX="362.0" layoutY="565.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="115.0" text="Perpuno" />
+      <Button layoutX="626.0" layoutY="565.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="115.0" text="Fshije" />
+      <ImageView fitHeight="26.0" fitWidth="22.0" layoutX="373.0" layoutY="566.0">
+         <image>
+            <Image url="@../images/lapsi.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="28.0" layoutX="637.0" layoutY="565.0">
+         <image>
+            <Image url="@../images/deletee.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="choicebox" layoutX="494.0" layoutY="92.0" prefHeight="26.0" prefWidth="128.0" />
+      <Label fx:id="label" layoutX="431.0" layoutY="132.0" />
+      <Label fx:id="label" layoutX="440.0" layoutY="189.0" prefHeight="18.0" prefWidth="179.0" />
+      <Button layoutX="591.0" layoutY="152.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="29.0" style="-fx-padding: 0; -fx-background-color: indigo;">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/images.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
