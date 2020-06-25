@@ -2,7 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
@@ -173,15 +173,15 @@
                         <Font size="11.0" />
                      </font>
                   </Label>
-                  <ChoiceBox fx:id="shtetiBox" prefHeight="28.0" prefWidth="207.0" GridPane.columnIndex="1" />
                   <TextField prefHeight="30.0" prefWidth="207.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <TextField prefHeight="30.0" prefWidth="207.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <ChoiceBox fx:id="qytetiBox" prefHeight="28.0" prefWidth="207.0" GridPane.columnIndex="3" />
                   <TextField prefHeight="30.0" prefWidth="207.0" promptText="+383-##-###-###" GridPane.columnIndex="3" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets right="15.0" />
                      </GridPane.margin>
                   </TextField>
+                  <ComboBox fx:id="shtetiBox" onAction="#shtetiCheck" prefHeight="28.0" prefWidth="182.0" GridPane.columnIndex="1" />
+                  <ComboBox fx:id="qytetiBox" prefHeight="28.0" prefWidth="210.0" GridPane.columnIndex="3" />
                </children>
             </GridPane>
             <GridPane layoutY="417.0" prefHeight="138.0" prefWidth="399.0">
@@ -216,9 +216,6 @@
                         <Font size="11.0" />
                      </font>
                   </Label>
-                  <ChoiceBox fx:id="fakultetiBox" prefHeight="28.0" prefWidth="345.0" GridPane.columnIndex="1" />
-                  <ChoiceBox fx:id="drejtimiBox" prefHeight="28.0" prefWidth="345.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <ChoiceBox fx:id="niveliBox" prefHeight="28.0" prefWidth="345.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                      <children>
                         <RadioButton mnemonicParsing="false" prefHeight="30.0" prefWidth="105.0" selected="true" text="I/E rregullt">
@@ -236,6 +233,9 @@
                         </RadioButton>
                      </children>
                   </HBox>
+                  <ComboBox fx:id="fakultetiBox" prefHeight="28.0" prefWidth="334.0" GridPane.columnIndex="1" />
+                  <ComboBox fx:id="drejtimiBox" prefHeight="28.0" prefWidth="315.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="niveliBox" prefHeight="28.0" prefWidth="333.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                </children>
             </GridPane>
             <GridPane layoutX="6.0" layoutY="92.0" prefHeight="111.0" prefWidth="588.0">
@@ -305,13 +305,8 @@
                   <DatePicker prefHeight="26.0" prefWidth="207.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                </children>
             </GridPane>
-            <Button layoutX="466.0" layoutY="574.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="96.0" text="Zgjedh" />
-            <Button layoutX="180.0" layoutY="573.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="135.0" text="Regjistro Studentët" />
-            <ImageView fitHeight="138.0" fitWidth="166.0" layoutX="445.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/Female_100px.png" />
-               </image>
-            </ImageView>
+            <Button fx:id="btnzgjedhfoto" layoutX="466.0" layoutY="574.0" mnemonicParsing="false" onAction="#zgjedhFoto" prefHeight="32.0" prefWidth="96.0" text="Zgjedh" />
+            <Button fx:id="regjistro" layoutX="180.0" layoutY="573.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="135.0" text="Regjistro Studentët" />
             <AnchorPane layoutX="-6.0" layoutY="40.0" prefHeight="30.0" prefWidth="630.0" style="-fx-background-color: #ccd9ff;">
                <children>
                   <Label layoutX="259.0" layoutY="-2.0" prefHeight="31.0" prefWidth="111.0" text="Informatat Bazike" textFill="#2a68ec">
@@ -363,6 +358,11 @@
                   </Label>
                </children>
             </AnchorPane>
+            <ImageView fx:id="foto" accessibleRole="LIST_VIEW" fitHeight="138.0" fitWidth="165.0" layoutX="431.0" layoutY="421.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/foto2.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>
