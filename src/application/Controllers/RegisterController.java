@@ -1,14 +1,26 @@
 package application;
 
+import java.awt.TextField;
+import java.awt.event.ActionEvent;
+import java.io.File;
+import java.net.MalformedURLException;
+
+import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileSystemView;
+
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class RegisterController {
+	
 	ObservableList <String> shtetiList=FXCollections.observableArrayList("Kosove","Shqiperi","Mali i Zi","Maqedoni");
 ObservableList<String> drejtimiList=FXCollections.observableArrayList("Automatikë e Kompjuterizuar dhe Robotikë","Elektroenergjetikë","Elektronikë"," Inxhinieri Kompjuterike","Telekomunikacion");
 ObservableList<String> niveliList=FXCollections.observableArrayList("Bachelor","Master","Doktoraturë");
@@ -76,8 +88,17 @@ ObservableList<String> maliList=FXCollections.observableArrayList("Andrijevica",
     @FXML
     private ToggleGroup gender;
     
+
+    @FXML
+    private Button btnzgjedhfoto;
+
+    @FXML
+    private Button regjistro;
+
+    @FXML
+    private ImageView foto;
     
-	@FXML
+    @FXML
     private void initialize() {	
 		shtetiBox.setValue("Kosove");
         shtetiBox.setItems(shtetiList);
@@ -92,26 +113,41 @@ ObservableList<String> maliList=FXCollections.observableArrayList("Andrijevica",
     	fakultetiBox.setItems(fakultetiList);	    	   
 	     
     }
-	
-	@FXML
-	   private void shtetiCheck() {
-	    	if(shtetiBox.getValue().equals("Kosove")) {
-	    		qytetiBox.setValue("Skënderaj");
-	    		qytetiBox.setItems(kosoveList);
-	    	}
-	    	else if(shtetiBox.getValue().equals("Shqiperi")) {
-	    		qytetiBox.setValue("Tirana");
-	    		qytetiBox.setItems(shqiperiList);
-	    	}
-	    	else if(shtetiBox.getValue().equals("Mali i Zi")) {
-	    		qytetiBox.setValue("Plava");
-	    		qytetiBox.setItems(maliList);
-	    	}
-	    	else {
-	    		qytetiBox.setValue("Berova");
-	    		qytetiBox.setItems(maqedoniaList);
-	    		
-	    	}
 
-}
-}
+    @FXML
+    private void shtetiCheck() {
+    	if(shtetiBox.getValue().equals("Kosove")) {
+    		qytetiBox.setValue("Skënderaj");
+    		qytetiBox.setItems(kosoveList);
+    	}
+    	else if(shtetiBox.getValue().equals("Shqiperi")) {
+    		qytetiBox.setValue("Tirana");
+    		qytetiBox.setItems(shqiperiList);
+    	}
+    	else if(shtetiBox.getValue().equals("Mali i Zi")) {
+    		qytetiBox.setValue("Plava");
+    		qytetiBox.setItems(maliList);
+    	}
+    	else {
+    		qytetiBox.setValue("Berova");
+    		qytetiBox.setItems(maqedoniaList);
+    		
+    	}
+    }
+
+    @FXML
+    void zgjedhFoto() throws MalformedURLException {
+    	JFileChooser chooser = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
+		int returnValue = chooser.showOpenDialog(null);
+		
+		if (returnValue == JFileChooser.APPROVE_OPTION) {
+			
+			File file = new File(chooser.getSelectedFile().getAbsolutePath());
+			String localURL = file.toURI().toURL().toString();
+			foto.setImage(new Image(localURL));
+		}
+	}
+
+    }
+
+
