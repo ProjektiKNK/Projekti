@@ -1,15 +1,22 @@
 package application.Controllers;
 
 import java.io.IOException;
-
+import java.net.URL;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
+import java.util.ResourceBundle;
+import java.util.Timer;
+import java.util.TimerTask;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-
-public class MainController {
+import javafx.scene.text.Text;
+public class MainController implements Initializable {
 
 	
 	
@@ -56,12 +63,20 @@ public class MainController {
 
     @FXML
     private Label registerSemesterMain1;
-
+    @FXML
+    private Label studentet;
+    @FXML
+    private Label manageLabel;
     @FXML
     private Label sendMessageMain1;
-    
-    
-    
+    @FXML
+    private Text textforclock;
+    @FXML
+    private Text textforclock1;
+    private ResourceBundle bundle;
+    private Locale locale;
+  
+
     
     @FXML
     void fxmlChanges(MouseEvent event) throws IOException {
@@ -102,6 +117,52 @@ public class MainController {
     	}
 	
     }
-    
+    private void loadLang(String lang)
+    {
+    	locale=new Locale(lang);
+    	bundle=ResourceBundle.getBundle("application.bundles.lang",locale);
+    	studentet.setText(bundle.getString("studentet_lbl_main"));
+    	registerStudents1.setText(bundle.getString("regjistro_lbl_main"));
+    	searchStudents1.setText(bundle.getString("kerko_edito_lbl_main"));
+    	reportStudents1.setText(bundle.getString("raporte_lbl_main"));
+    	semesterStudents1.setText(bundle.getString("semestri_lbl_main"));
+    	registerSemester1.setText(bundle.getString("regjistro_sms_lbl_main"));
+    	editmyProfile1.setText(bundle.getString("editoprofilin_lbl_main"));
+    	
+    	manageLabel.setText(bundle.getString("systemlabel_main"));
+    	registerStudentsmain1.setText(bundle.getString("regjistro1_lbl_main"));
+    	contactMain1.setText(bundle.getString("contact_lbl_main"));
+    	ReportStudentsMain1.setText(bundle.getString("raporte1_lbl_main"));
+    	searchStudentsMain1.setText(bundle.getString("kerko1_edito_lbl_main"));
+    	registerSemesterMain1.setText(bundle.getString("regjistro_sms_lbl_main"));
+    	sendMessageMain1.setText(bundle.getString("sendmessage_lbl_main"));
+    	
+    	
+    }
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		DataTani();
+		String language="enijij";
+		if(language.equals("en")) {
+			loadLang("en");
+		}
+		
+
+	}
+	private void DataTani() {
+		Timer timer = new Timer();
+		//LocalDateTime datetime1;
+        timer.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+            	LocalDateTime date = LocalDateTime.now();  
+            	DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");  
+                textforclock.setText("Data: "+date.format(format).toString());
+            }
+        }, 0, 1000);
+		
+	}
+
+
 
 }
