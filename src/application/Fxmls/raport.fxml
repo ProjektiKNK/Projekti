@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="anchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controllers.RaportController">
 	   <children>
       <SplitPane dividerPositions="0.2786206896551724" layoutY="-1.0" prefHeight="650.0" prefWidth="872.0">
         <items>
@@ -25,17 +25,17 @@
                         <Font size="17.0" />
                      </font>
                   </Label>
-                  <Label fx:id="registerStudents" layoutX="88.0" layoutY="177.0" text="Regjistro" textFill="WHITE">
+                  <Label fx:id="registerStudents" layoutX="88.0" layoutY="177.0" onMouseClicked="#fxmlChanges" text="Regjistro" textFill="WHITE">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Label>
-                  <Label fx:id="searchStudents" layoutX="88.0" layoutY="229.0" text="Kërko/Edito" textFill="WHITE">
+                  <Label fx:id="searchStudents" layoutX="88.0" layoutY="229.0" onMouseClicked="#fxmlChanges" text="Kërko/Edito" textFill="WHITE">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Label>
-                  <Label fx:id="reportStudents" layoutX="54.0" layoutY="278.0" text="Raporte" textFill="WHITE">
+                  <Label fx:id="reportStudents" layoutX="54.0" layoutY="278.0" onMouseClicked="#fxmlChanges" text="Raporte" textFill="WHITE">
                      <font>
                         <Font size="17.0" />
                      </font>
@@ -45,7 +45,7 @@
                         <Font size="17.0" />
                      </font>
                   </Label>
-                  <Label fx:id="registerSemester" layoutX="84.0" layoutY="374.0" text="Regjistro Semestrin" textFill="WHITE">
+                  <Label fx:id="registerSemester" layoutX="84.0" layoutY="374.0" onMouseClicked="#fxmlChanges" text="Regjistro Semestrin" textFill="WHITE">
                      <font>
                         <Font size="17.0" />
                      </font>
@@ -125,7 +125,7 @@
                         <Image url="@../../images/User_24px.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="editmyProfile" layoutX="54.0" layoutY="431.0" text="Edito Profilin" textFill="WHITE">
+                  <Label fx:id="editmyProfile" layoutX="54.0" layoutY="431.0" onMouseClicked="#fxmlChanges" text="Edito Profilin" textFill="WHITE">
                      <font>
                         <Font size="17.0" />
                      </font>

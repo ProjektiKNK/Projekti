@@ -17,13 +17,13 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="635.0" prefWidth="867.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RegisterController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="631.0" prefWidth="867.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controllers.RegisterController">
    <children>
       <AnchorPane layoutY="-1.0" prefHeight="638.0" prefWidth="235.0">
          <children>
             <ImageView fitHeight="571.0" fitWidth="234.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/fotobackground.png" />
+                  <Image url="@../../images/fotobackground.png" />
                </image>
             </ImageView>
             <Label layoutX="47.0" layoutY="132.0" text="Studentët" textFill="WHITE">
@@ -31,17 +31,17 @@
                   <Font size="17.0" />
                </font>
             </Label>
-            <Label fx:id="registerStudents" layoutX="88.0" layoutY="164.0" text="Regjistro" textFill="WHITE">
+            <Label fx:id="registerStudents" layoutX="88.0" layoutY="164.0" onMouseClicked="#fxmlChanges" text="Regjistro" textFill="WHITE">
                <font>
                   <Font size="17.0" />
                </font>
             </Label>
-            <Label fx:id="searchStudents" layoutX="88.0" layoutY="216.0" text="Kërko/Edito" textFill="WHITE">
+            <Label fx:id="searchStudents" layoutX="88.0" layoutY="216.0" onMouseClicked="#fxmlChanges" text="Kërko/Edito" textFill="WHITE">
                <font>
                   <Font size="17.0" />
                </font>
             </Label>
-            <Label fx:id="reportStudents" layoutX="54.0" layoutY="265.0" text="Raporte" textFill="WHITE">
+            <Label fx:id="reportStudents" layoutX="54.0" layoutY="265.0" onMouseClicked="#fxmlChanges" text="Raporte" textFill="WHITE">
                <font>
                   <Font size="17.0" />
                </font>
@@ -51,64 +51,64 @@
                   <Font size="17.0" />
                </font>
             </Label>
-            <Label fx:id="registerSemester" layoutX="84.0" layoutY="361.0" text="Regjistro Semestrin" textFill="WHITE">
+            <Label fx:id="registerSemester" layoutX="84.0" layoutY="361.0" onMouseClicked="#fxmlChanges" text="Regjistro Semestrin" textFill="WHITE">
                <font>
                   <Font size="17.0" />
                </font>
             </Label>
             <ImageView fitHeight="34.0" fitWidth="28.0" layoutX="14.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/userimg2.png" />
+                  <Image url="@../../images/userimg2.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="34.0" fitWidth="33.0" layoutX="43.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/adduser.png" />
+                  <Image url="@../../images/adduser.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="34.0" fitWidth="33.0" layoutX="46.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/search2.png" />
+                  <Image url="@../../images/search2.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="28.0" fitWidth="39.0" layoutX="14.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/University.png" />
+                  <Image url="@../../images/University.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="34.0" fitWidth="39.0" layoutX="11.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/document2.png" />
+                  <Image url="@../../images/document2.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="191.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/expand.png" />
+                  <Image url="@../../images/expand.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="191.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/expand.png" />
+                  <Image url="@../../images/expand.png" />
                </image>
             </ImageView>
             <ImageView fx:id="contact" fitHeight="42.0" fitWidth="30.0" layoutX="14.0" layoutY="592.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/Phone.png" />
+                  <Image url="@../../images/Phone.png" />
                </image>
             </ImageView>
             <ImageView fx:id="settingsHelp" fitHeight="42.0" fitWidth="30.0" layoutX="191.0" layoutY="592.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/Settings.png" />
+                  <Image url="@../../images/Settings.png" />
                </image>
             </ImageView>
             <ImageView fx:id="sendMessage" fitHeight="42.0" fitWidth="30.0" layoutX="107.0" layoutY="592.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/message2.png" />
+                  <Image url="@../../images/message2.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="42.0" fitWidth="30.0" layoutX="13.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/Menu.png" />
+                  <Image url="@../../images/Menu.png" />
                </image>
             </ImageView>
             <Label layoutX="66.0" layoutY="25.0" text="SBMS/PAGE" textFill="#3583ff">
@@ -118,22 +118,27 @@
             </Label>
             <ImageView fitHeight="34.0" fitWidth="30.0" layoutX="193.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/Lock.png" />
+                  <Image url="@../../images/Lock.png" />
                </image>
             </ImageView>
-            <Label fx:id="editmyProfile" layoutX="54.0" layoutY="418.0" text="Edito Profilin" textFill="WHITE">
+            <Label fx:id="editmyProfile" layoutX="54.0" layoutY="418.0" onMouseClicked="#fxmlChanges" text="Edito Profilin" textFill="WHITE">
                <font>
                   <Font size="17.0" />
                </font>
             </Label>
             <ImageView fitHeight="34.0" fitWidth="36.0" layoutX="12.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/User_24px.png" />
+                  <Image url="@../../images/User_24px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="39.0" layoutX="49.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/money.png" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="242.0" layoutY="3.0" prefHeight="630.0" prefWidth="630.0">
+      <AnchorPane layoutX="242.0" layoutY="3.0" prefHeight="629.0" prefWidth="633.0">
          <children>
             <GridPane layoutX="6.0" layoutY="255.0" prefHeight="104.0" prefWidth="617.0">
                <columnConstraints>
@@ -316,7 +321,7 @@
                   </Label>
                   <ImageView fitHeight="20.0" fitWidth="28.0" layoutX="232.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/Name_25px.png" />
+                        <Image url="@../../images/Name_25px.png" />
                      </image>
                   </ImageView>
                </children>
@@ -330,7 +335,7 @@
                   </Label>
                   <ImageView fitHeight="20.0" fitWidth="28.0" layoutX="232.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/Country_25px.png" />
+                        <Image url="@../../images/Country_25px.png" />
                      </image>
                   </ImageView>
                </children>
@@ -344,7 +349,7 @@
                   </Label>
                   <ImageView fitHeight="20.0" fitWidth="28.0" layoutX="232.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/University_25px.png" />
+                        <Image url="@../../images/University.png" />
                      </image>
                   </ImageView>
                </children>
@@ -360,7 +365,7 @@
             </AnchorPane>
             <ImageView fx:id="foto" accessibleRole="LIST_VIEW" fitHeight="138.0" fitWidth="165.0" layoutX="431.0" layoutY="421.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/foto2.png" />
+                  <Image url="@../../images/foto2.png" />
                </image>
             </ImageView>
          </children>
