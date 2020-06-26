@@ -145,11 +145,30 @@
          </font>
       </Text>
       <fx:define>
+         
    <Image fx:id="btnImage" url="@../../images/images.png" />
 </fx:define>
       <TextField layoutX="494.0" layoutY="152.0" prefHeight="26.3" prefWidth="124.0" />
+      <ScrollPane layoutX="250.0" layoutY="225.0" prefHeight="290.0" prefWidth="606.0">
+         <content>
+            <TableView fx:id="tableview" prefHeight="289.0" prefWidth="608.0" styleClass="table-view{">
+              <columns>
+                  <TableColumn prefWidth="43.199951171875" text="Id" />
+                <TableColumn prefWidth="44.79998779296875" text="Emri" />
+                <TableColumn prefWidth="55.99993896484375" text="E.Prindit" />
+                  <TableColumn prefWidth="53.60003662109375" text="Mbiemri" />
+                  <TableColumn prefWidth="56.79998779296875" text="Fakulteti" />
+                  <TableColumn prefWidth="57.600006103515625" text="Qyteti" />
+                  <TableColumn prefWidth="76.0" text="Nr personal" />
+                  <TableColumn prefWidth="58.4000244140625" text="Adresa" />
+                  <TableColumn prefWidth="47.2000732421875" text="Tel" />
+                  <TableColumn prefWidth="48.800048828125" text="Email" />
+                  <TableColumn prefWidth="45.0" text="Gjinia" />
+              </columns>
+            </TableView>
+         </content></ScrollPane>
       
-      <ScrollPane layoutX="262.0" layoutY="225.0" prefHeight="282.0" prefWidth="578.0" />
+     
       <Button layoutX="362.0" layoutY="565.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="115.0" text="Perpuno" />
       <Button layoutX="626.0" layoutY="565.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="115.0" text="Fshije" />
       <ImageView fitHeight="26.0" fitWidth="22.0" layoutX="373.0" layoutY="566.0">
