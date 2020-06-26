@@ -53,6 +53,9 @@ public class EditController implements Initializable {
 	private Label editmyProfile1;
     @FXML
     private Label label;
+   
+    @FXML
+    private TableView  tableview;
     
    
     @FXML
