@@ -9,11 +9,10 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
-public class SemestriController {
-
-	
+public class RaportController {
 	@FXML
 	private AnchorPane anchorPane;
+
     @FXML
     private Label registerStudents;
 
@@ -40,9 +39,6 @@ public class SemestriController {
 
     @FXML
     private Label editmyProfile;
-    
-    
-    
     @FXML
     void fxmlChanges(MouseEvent event) throws IOException {
     	if(event.getSource()==editmyProfile)
@@ -82,6 +78,5 @@ public class SemestriController {
     	}
 	
     }
-
 
 }

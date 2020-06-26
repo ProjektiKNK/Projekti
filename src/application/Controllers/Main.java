@@ -1,21 +1,33 @@
-package application;
+package application.Controllers;
 import java.io.IOException;
+
+
+import javafx.scene.Scene;
+
+import javafx.stage.Stage;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.stage.Stage;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws IOException {
-		Parent root=FXMLLoader.load(getClass().getResource("fx.fxml"));
-		Scene scene= new Scene(root);
+		
+		Parent parent = FXMLLoader.load(getClass().getResource("../Fxmls/MainXML.fxml"));
+		//Pane parent=new Pane();
+		
+		Scene scene=new Scene(parent);
+		
 		primaryStage.setScene(scene);
 		primaryStage.show();
+		
 	}
-	public static void main(String[] args) {
-		launch(args);
-	}
+
+
+	 public static void main(String[] args) {
+	 Application.launch(args);
+	 }
 }
 
+
+	

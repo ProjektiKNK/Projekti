@@ -1,8 +1,8 @@
-package application;
+package application.Controllers;
 
-import java.awt.TextField;
-import java.awt.event.ActionEvent;
+
 import java.io.File;
+import java.io.IOException;
 import java.net.MalformedURLException;
 
 import javax.swing.JFileChooser;
@@ -12,34 +12,39 @@ import javax.swing.filechooser.FileSystemView;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 
 public class RegisterController {
 	
 	ObservableList <String> shtetiList=FXCollections.observableArrayList("Kosove","Shqiperi","Mali i Zi","Maqedoni");
-ObservableList<String> drejtimiList=FXCollections.observableArrayList("AutomatikÃ« e Kompjuterizuar dhe RobotikÃ«","ElektroenergjetikÃ«","ElektronikÃ«"," Inxhinieri Kompjuterike","Telekomunikacion");
-ObservableList<String> niveliList=FXCollections.observableArrayList("Bachelor","Master","DoktoraturÃ«");
-ObservableList<String> fakultetiList=FXCollections.observableArrayList("Fakulteti i InxhinierisÃ« Elektrike dhe Kompjuterike");
-ObservableList<String> kosoveList=FXCollections.observableArrayList("DeÃ§an","Sharr",	"Hani i Elezit",	
-"Ferizaji","GjakovÃ«","Gjilan",	"Drenas",	"GraÃ§anica","Burimi	","Juniku	","KaÃ§aniku","Dardana",	"Klina",	"Kllokot",	
-"FushÃ« KosovÃ«",	"Albanik","Lipjani",	"MalishevÃ«","MamushÃ«","MitrovicÃ«","Artana",	"Kastriot",	"Rahovec",
-"Parteshi","PejÃ«",	"PrishtinÃ«","Prizreni",	"Besiana",	"Ranillugu",	"SkÃ«nderaj",	
-"ShtÃ«rpca",	"Shtime",	"TherandÃ«",	"Viti",	"Vushtrri"	,"Zubin Potok","ZveÃ§an");
+ObservableList<String> drejtimiList=FXCollections.observableArrayList("Automatikë e Kompjuterizuar dhe Robotikë","Elektroenergjetikë","Elektronikë"," Inxhinieri Kompjuterike","Telekomunikacion");
+ObservableList<String> niveliList=FXCollections.observableArrayList("Bachelor","Master","Doktoraturë");
+ObservableList<String> fakultetiList=FXCollections.observableArrayList("Fakulteti i Inxhinierisë Elektrike dhe Kompjuterike");
+ObservableList<String> kosoveList=FXCollections.observableArrayList("Deçan","Sharr",	"Hani i Elezit",	
+"Ferizaji","Gjakovë","Gjilan",	"Drenas",	"Graçanica","Burimi	","Juniku	","Kaçaniku","Dardana",	"Klina",	"Kllokot",	
+"Fushë Kosovë",	"Albanik","Lipjani",	"Malishevë","Mamushë","Mitrovicë","Artana",	"Kastriot",	"Rahovec",
+"Parteshi","Pejë",	"Prishtinë","Prizreni",	"Besiana",	"Ranillugu",	"Skënderaj",	
+"Shtërpca",	"Shtime",	"Therandë",	"Viti",	"Vushtrri"	,"Zubin Potok","Zveçan");
 
-ObservableList<String> shqiperiList=FXCollections.observableArrayList("Tirana	","DurrÃ«si","Shkodra"	,"Elbasani",
-"Vlora"	,"KorÃ§a"	,"Fieri	","Berati	","Lushnja"	,"Pogradeci	","LaÃ§i"	,"Lezha	",
-"KukÃ«si	","Gjirokastra");
-ObservableList<String> maliList=FXCollections.observableArrayList("Andrijevica","Bellopoja","Berana","Budua","Ã‡etina",
+ObservableList<String> shqiperiList=FXCollections.observableArrayList("Tirana	","Durrësi","Shkodra"	,"Elbasani",
+"Vlora"	,"Korça"	,"Fieri	","Berati	","Lushnja"	,"Pogradeci	","Laçi"	,"Lezha	",
+"Kukësi	","Gjirokastra");
+ObservableList<String> maliList=FXCollections.observableArrayList("Andrijevica","Bellopoja","Berana","Budua","Çetina",
 	"Danilovgradi","Golluboci","Herceg Novi","Koloshini","Kotorri","Mojkovaci","Nikshiqi","Plava","Plevla","Pluzhina");
 
-	ObservableList<String> maqedoniaList=FXCollections.observableArrayList("Berova","DellÃ§eva","KoÃ§ani","Kamenica",	"PeÃ§eva	",
+	ObservableList<String> maqedoniaList=FXCollections.observableArrayList("Berova","Dellçeva","Koçani","Kamenica",	"Peçeva	",
 			"Probishtipi","Shtipi","Vinica");
 
+	@FXML
+    private AnchorPane anchorPane;
     @FXML
     private Label registerStudents;
 
@@ -105,11 +110,11 @@ ObservableList<String> maliList=FXCollections.observableArrayList("Andrijevica",
         qytetiBox.setValue("Skenderaj");
         qytetiBox.setItems(kosoveList);
           
-    	drejtimiBox.setValue("AutomatikÃ« e Kompjuterizuar dhe RobotikÃ«");
+    	drejtimiBox.setValue("Automatikë e Kompjuterizuar dhe Robotikë");
     	drejtimiBox.setItems(drejtimiList);
     	niveliBox.setValue("Bachelor");
     	niveliBox.setItems(niveliList);
-    	fakultetiBox.setValue("Fakulteti i InxhinierisÃ« Elektrike dhe Kompjuterike");
+    	fakultetiBox.setValue("Fakulteti i Inxhinierisë Elektrike dhe Kompjuterike");
     	fakultetiBox.setItems(fakultetiList);	    	   
 	     
     }
@@ -117,7 +122,7 @@ ObservableList<String> maliList=FXCollections.observableArrayList("Andrijevica",
     @FXML
     private void shtetiCheck() {
     	if(shtetiBox.getValue().equals("Kosove")) {
-    		qytetiBox.setValue("SkÃ«nderaj");
+    		qytetiBox.setValue("Skënderaj");
     		qytetiBox.setItems(kosoveList);
     	}
     	else if(shtetiBox.getValue().equals("Shqiperi")) {
@@ -147,7 +152,49 @@ ObservableList<String> maliList=FXCollections.observableArrayList("Andrijevica",
 			foto.setImage(new Image(localURL));
 		}
 	}
-
+    
+    @FXML
+    void fxmlChanges(MouseEvent event) throws IOException {
+    	if(event.getSource()==editmyProfile)
+    	{
+    		AnchorPane pane=FXMLLoader.load(getClass().getResource("../Fxmls/MyProfile.fxml"));
+    		anchorPane.getChildren().setAll(pane);
+    	}
+    	else if(event.getSource()==registerSemester)
+    	{
+    		AnchorPane pane=FXMLLoader.load(getClass().getResource("../Fxmls/fx.fxml"));
+    		anchorPane.getChildren().setAll(pane);
+    	}
+    	else if(event.getSource()==reportStudents )
+    	{
+    		AnchorPane pane=FXMLLoader.load(getClass().getResource("../Fxmls/raport.fxml"));
+    		anchorPane.getChildren().setAll(pane);
+    	}
+    	else if(event.getSource()==searchStudents )
+    	{
+    		AnchorPane pane=FXMLLoader.load(getClass().getResource("../Fxmls/EditDeleteUser.fxml"));
+    		anchorPane.getChildren().setAll(pane);
+    	}
+    	else if(event.getSource()==registerStudents)
+    	{
+    		AnchorPane pane=FXMLLoader.load(getClass().getResource("../Fxmls/studentregister.fxml"));
+    		anchorPane.getChildren().setAll(pane);
+    	}
+    	else if(event.getSource()==sendMessage)
+    	{
+    		AnchorPane pane=FXMLLoader.load(getClass().getResource("../Fxmls/FXMLperSend.fxml"));
+    		anchorPane.getChildren().setAll(pane);
+    	}
+    	else if(event.getSource()==contact)
+    	{
+    		AnchorPane pane=FXMLLoader.load(getClass().getResource("../Fxmls/ContactUs.fxml"));
+    		anchorPane.getChildren().setAll(pane);
+    	}
+	
     }
+    
+    
+
+}
 
 
