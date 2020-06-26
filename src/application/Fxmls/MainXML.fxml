@@ -5,6 +5,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane fx:id="anchorMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="872.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controllers.MainController">
    <children>
@@ -15,7 +16,7 @@
                   <Image url="@..\..\images\fotobackground.png" />
                </image>
             </ImageView>
-            <Label layoutX="47.0" layoutY="145.0" text="Studentët" textFill="WHITE" AnchorPane.bottomAnchor="479.80000000000007" AnchorPane.leftAnchor="47.0" AnchorPane.rightAnchor="117.80000000000001" AnchorPane.topAnchor="144.99999999999997">
+            <Label fx:id="studentet" layoutX="47.0" layoutY="145.0" text="Studentët" textFill="WHITE" AnchorPane.bottomAnchor="479.80000000000007" AnchorPane.leftAnchor="47.0" AnchorPane.rightAnchor="117.80000000000001" AnchorPane.topAnchor="144.99999999999997">
                <font>
                   <Font size="17.0" />
                </font>
@@ -144,7 +145,7 @@
                   <Image url="@..\..\images\message.png" />
                </image>
             </ImageView>
-            <Label layoutX="202.0" layoutY="45.0" text="Sistemi për Menaxhimin e Studentëve">
+            <Label fx:id="manageLabel" layoutX="202.0" layoutY="45.0" text="Sistemi për Menaxhimin e Studentëve" textAlignment="CENTER">
                <font>
                   <Font size="23.0" />
                </font>
@@ -169,36 +170,41 @@
                   <Image url="@..\..\images\search.png" />
                </image>
             </ImageView>
-            <Label fx:id="registerStudentsmain1" layoutX="52.0" layoutY="324.0" onMouseClicked="#fxmlChanges" text="Regjistro Studentet">
+            <Label fx:id="registerStudentsmain1" layoutX="52.0" layoutY="324.0" onMouseClicked="#fxmlChanges" text="Regjistro Studentet" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="contactMain1" layoutX="285.0" layoutY="324.0" onMouseClicked="#fxmlChanges" text="Kontaktoni">
+            <Label fx:id="contactMain1" layoutX="285.0" layoutY="324.0" onMouseClicked="#fxmlChanges" text="Kontaktoni" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="ReportStudentsMain1" layoutX="463.0" layoutY="324.0" onMouseClicked="#fxmlChanges" text="Raporte te Studenteve">
+            <Label fx:id="ReportStudentsMain1" layoutX="463.0" layoutY="324.0" onMouseClicked="#fxmlChanges" text="Raporte te Studenteve" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="searchStudentsMain1" layoutX="43.0" layoutY="569.0" onMouseClicked="#fxmlChanges" text="Kerko/Edito Studentet">
+            <Label fx:id="searchStudentsMain1" layoutX="43.0" layoutY="569.0" onMouseClicked="#fxmlChanges" text="Kerko/Edito Studentet" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="registerSemesterMain1" layoutX="267.0" layoutY="569.0" onMouseClicked="#fxmlChanges" text="Regjistro Semestrin">
+            <Label fx:id="registerSemesterMain1" layoutX="267.0" layoutY="569.0" onMouseClicked="#fxmlChanges" text="Regjistro Semestrin" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="sendMessageMain1" layoutX="487.0" layoutY="569.0" onMouseClicked="#fxmlChanges" text="Dergo Mesazh">
+            <Label fx:id="sendMessageMain1" layoutX="487.0" layoutY="569.0" onMouseClicked="#fxmlChanges" text="Dergo Mesazh" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
+            <Text fx:id="textforclock" fill="#ff3b3b" layoutX="200.0" layoutY="629.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" wrappingWidth="234.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
          </children>
       </AnchorPane>
    </children>
