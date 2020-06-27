@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="WriteMessageControl">
+   <children>
+      <AnchorPane layoutX="-121.0" layoutY="-96.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <ColorPicker fx:id="colorpicker" editable="true" layoutX="132.0" layoutY="101.0" onAction="#changecolor" prefHeight="25.0" prefWidth="100.0" promptText="TextColor" />
+            <TextArea fx:id="textarea" layoutX="124.0" layoutY="220.0" prefHeight="98.0" prefWidth="461.0" style="-fx-background-color: #3583ff;" />
+            <Text fx:id="mytext" layoutX="132.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shkruani mesazhin me poshte" textAlignment="CENTER" wrappingWidth="461.3333333333332">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <Button fx:id="dergo" layoutX="276.0" layoutY="333.0" mnemonicParsing="false" onAction="#dergo" prefHeight="44.0" prefWidth="139.0" style="-fx-background-color: #3583ff;" text="Dergo" textAlignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
