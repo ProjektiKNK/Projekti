@@ -11,11 +11,13 @@ import java.util.TimerTask;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 public class MainController implements Initializable {
 
 	
@@ -37,6 +39,8 @@ public class MainController implements Initializable {
     @FXML
     private Label registerSemester1;
 
+    @FXML
+    private Label homeLabel;
     @FXML
     private ImageView contact1;
 
@@ -69,10 +73,16 @@ public class MainController implements Initializable {
     private Label manageLabel;
     @FXML
     private Label sendMessageMain1;
+    
+    @FXML
+    private Label logoutLabel;
+    
     @FXML
     private Text textforclock;
     @FXML
     private Text textforclock1;
+    @FXML
+    private Text textforLanguage;
     private ResourceBundle bundle;
     private Locale locale;
   
@@ -84,6 +94,7 @@ public class MainController implements Initializable {
     	{
     		AnchorPane pane=FXMLLoader.load(getClass().getResource("../Fxmls/MyProfile.fxml"));
     		anchorMain.getChildren().setAll(pane);
+
     	}
     	else if(event.getSource()==registerSemester1 || event.getSource()==registerSemesterMain1)
     	{
@@ -115,12 +126,20 @@ public class MainController implements Initializable {
     		AnchorPane pane=FXMLLoader.load(getClass().getResource("../Fxmls/ContactUs.fxml"));
     		anchorMain.getChildren().setAll(pane);
     	}
+    	else if(event.getSource()==settingsHelp1)
+    	{
+    		Stage stage=new Stage();
+    		AnchorPane pane=FXMLLoader.load(getClass().getResource("../Fxmls/settings.fxml"));
+    		stage.setScene(new Scene(pane));
+    		stage.show();
+    	}
 	
     }
-    private void loadLang(String lang)
+    public void loadLang(String lang)
     {
     	locale=new Locale(lang);
     	bundle=ResourceBundle.getBundle("application.bundles.lang",locale);
+    	homeLabel.setText(bundle.getString("homeLabel_lbl_main"));
     	studentet.setText(bundle.getString("studentet_lbl_main"));
     	registerStudents1.setText(bundle.getString("regjistro_lbl_main"));
     	searchStudents1.setText(bundle.getString("kerko_edito_lbl_main"));
@@ -128,6 +147,8 @@ public class MainController implements Initializable {
     	semesterStudents1.setText(bundle.getString("semestri_lbl_main"));
     	registerSemester1.setText(bundle.getString("regjistro_sms_lbl_main"));
     	editmyProfile1.setText(bundle.getString("editoprofilin_lbl_main"));
+    	logoutLabel.setText(bundle.getString("logoutLabel_main"));
+    	
     	
     	manageLabel.setText(bundle.getString("systemlabel_main"));
     	registerStudentsmain1.setText(bundle.getString("regjistro1_lbl_main"));
@@ -141,14 +162,18 @@ public class MainController implements Initializable {
     }
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		
 		DataTani();
-		String language="enijij";
-		if(language.equals("en")) {
+
+		String language="en";
+		if(language.equals("en")){
 			loadLang("en");
 		}
 		
 
 	}
+
+
 	private void DataTani() {
 		Timer timer = new Timer();
 		//LocalDateTime datetime1;
