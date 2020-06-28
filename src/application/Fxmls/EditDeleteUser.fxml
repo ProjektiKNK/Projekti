@@ -137,7 +137,7 @@
             <Font name="Verdana" size="14.0" />
          </font>
       </Text>
-      
+     
 
       <Text layoutX="358.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filter:">
          <font>
@@ -145,53 +145,48 @@
          </font>
       </Text>
       <fx:define>
-         
-   <Image fx:id="btnImage" url="@../../images/images.png" />
+   <Image fx:id="btnImage" url="@../images/images.png" />
 </fx:define>
-      <TextField layoutX="494.0" layoutY="152.0" prefHeight="26.3" prefWidth="124.0" />
-      <ScrollPane layoutX="250.0" layoutY="225.0" prefHeight="290.0" prefWidth="606.0">
-         <content>
-            <TableView fx:id="tableview" prefHeight="289.0" prefWidth="608.0" styleClass="table-view{">
+      <TextField fx:id="txtFilter" layoutX="494.0" layoutY="152.0" prefHeight="26.3" prefWidth="124.0" />
+     
+     
+            <TableView fx:id="tableview" layoutX="246.7" layoutY="220.0" prefHeight="289.0" prefWidth="608.0" styleClass="table-view{">
               <columns>
-                  <TableColumn prefWidth="43.199951171875" text="Id" />
-                <TableColumn prefWidth="44.79998779296875" text="Emri" />
-                <TableColumn prefWidth="55.99993896484375" text="E.Prindit" />
-                  <TableColumn prefWidth="53.60003662109375" text="Mbiemri" />
-                  <TableColumn prefWidth="56.79998779296875" text="Fakulteti" />
-                  <TableColumn prefWidth="57.600006103515625" text="Qyteti" />
-                  <TableColumn prefWidth="76.0" text="Nr personal" />
-                  <TableColumn prefWidth="58.4000244140625" text="Adresa" />
-                  <TableColumn prefWidth="47.2000732421875" text="Tel" />
-                  <TableColumn prefWidth="48.800048828125" text="Email" />
-                  <TableColumn prefWidth="45.0" text="Gjinia" />
+                  <TableColumn fx:id="col_id" prefWidth="54.199951171875" text="Id" />
+                  <TableColumn fx:id="col_emri" prefWidth="54.79998779296875" text="Emri" />
+                  <TableColumn fx:id="col_eprindit" prefWidth="54.99993896484375" text="E.Prindit" />
+                  <TableColumn fx:id="col_mbiemri" prefWidth="54.60003662109375" text="Mbiemri" />
+                  <TableColumn fx:id="col_fakulteti" prefWidth="54.79998779296875" text="Fakulteti" />
+                  <TableColumn fx:id="col_qyteti" prefWidth="54.600006103515625" text="Qyteti" />
+                  <TableColumn fx:id="col_nrpersonal" prefWidth="54.0" text="Nr personal" />
+                  <TableColumn fx:id="col_adresa" prefWidth="54.4000244140625" text="Adresa" />
+                  <TableColumn fx:id="col_tel" prefWidth="54.2000732421875" text="Tel" />
+                  <TableColumn fx:id="col_email" prefWidth="54.800048828125" text="Email" />
+                  <TableColumn fx:id="col_gjinia" prefWidth="54.7998046875" text="Gjinia" />
               </columns>
             </TableView>
-         </content></ScrollPane>
-      
-     
-      <Button layoutX="362.0" layoutY="565.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="115.0" text="Perpuno" />
-      <Button layoutX="626.0" layoutY="565.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="115.0" text="Fshije" />
+         
+      <Button layoutX="362.0" layoutY="565.0" mnemonicParsing="false" onAction="#actionPerformed" prefHeight="26.0" prefWidth="115.0" text="Perpuno" />
+      <Button layoutX="626.0" layoutY="565.0" mnemonicParsing="false" onAction="#onEdit" prefHeight="26.0" prefWidth="115.0" text="Fshije" />
       <ImageView fitHeight="26.0" fitWidth="22.0" layoutX="373.0" layoutY="566.0">
          <image>
-            <Image url="@../../images/lapsi.png" />
+            <Image url="@../images/lapsi.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="27.0" fitWidth="28.0" layoutX="637.0" layoutY="565.0">
          <image>
-            <Image url="@../../images/deletee.png" />
+            <Image url="@../images/deletee.png" />
          </image>
       </ImageView>
       <ComboBox fx:id="choicebox" layoutX="494.0" layoutY="92.0" prefHeight="26.0" prefWidth="128.0" />
       <Label fx:id="label" layoutX="431.0" layoutY="132.0" />
       <Label fx:id="label" layoutX="440.0" layoutY="189.0" prefHeight="18.0" prefWidth="179.0" />
-      <Button layoutX="591.0" layoutY="152.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="29.0" style="-fx-padding: 0; -fx-background-color: indigo;">
-         <graphic>
-            <ImageView fitHeight="30.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../images/images.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
+      <Button fx:id="butoni" layoutX="591.0" layoutY="152.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="29.0" style="-fx-padding: 0; -fx-background-color: DARKBLUE;" />
+      <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="654.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="kl" fitHeight="18.0" fitWidth="22.0" layoutX="595.0" layoutY="157.0">
+         <image>
+            <Image url="@../../images/search%20image.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
