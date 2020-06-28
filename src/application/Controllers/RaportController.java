@@ -37,6 +37,54 @@ public class RaportController {
     @FXML
     private ImageView sendMessage;
 
+	@FXML
+    private TextField txtViti4;
+
+    @FXML
+    private TextField txtElektronike;
+
+    @FXML
+    private TextField txtAutomatike;
+
+    @FXML
+    private Label universiteti;
+
+    @FXML
+    private TextField txtViti1;
+
+    @FXML
+    private TextField txtViti2;
+
+    @FXML
+    private TextField txtElektroenergjetike;
+
+    @FXML
+    private TextField txtTelekomunikacion;
+
+    @FXML
+    private Label raport;
+
+    @FXML
+    private TextField txtKompjuterike;
+
+    @FXML
+    private TextField txtMeshkuj;
+
+    @FXML
+    private TextField txtFemra;
+
+    @FXML
+    private Button gjenero;
+
+    @FXML
+    private Button ruaj;
+    
+    @FXML
+    private TextField txtViti3;
+
+    @FXML
+    private TextField txtNumriTotal;
+
     @FXML
     private Label editmyProfile;
     @FXML
