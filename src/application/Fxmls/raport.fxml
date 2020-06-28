@@ -132,52 +132,52 @@
                   </Label>
                </children>
             </AnchorPane>
-          <AnchorPane accessibleRole="BUTTON" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="649.0" minWidth="162.0" prefHeight="652.0" prefWidth="1074.0">
+ <AnchorPane accessibleRole="BUTTON" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="526.0" minWidth="162.0" prefHeight="652.0" prefWidth="626.0">
                <children>
-                  <Label layoutX="52.0" layoutY="96.0" prefHeight="18.0" prefWidth="239.0" text="Numri i studenteve te regjistruar ne UP :" />
-                  <TextField layoutX="291.0" layoutY="92.0" mouseTransparent="true" />
+                  <Label layoutX="52.0" layoutY="96.0" prefHeight="18.0" prefWidth="239.0" text="Numri i studentëve të regjistruar në UP :" />
                   <ImageView fitHeight="93.0" fitWidth="134.0" layoutX="486.0" layoutY="14.0">
                      <image>
-                        <Image url="@../../Desktop/logo.png" />
+                        <Image url="@../../images/logo.png" />
                      </image>
                   </ImageView>
-                  <TextField layoutX="443.0" layoutY="188.0" />
-                  <TextField layoutX="156.0" layoutY="245.0" />
-                  <TextField layoutX="443.0" layoutY="245.0" />
-                  <Label layoutX="174.0" prefHeight="30.0" prefWidth="251.0" text="Universiteti i Prishtines">
+                  <TextField fx:id="txtViti4" layoutX="443.0" layoutY="188.0" />
+                  <TextField fx:id="txtElektronike" layoutX="156.0" layoutY="245.0" />
+                  <TextField fx:id="txtAutomatike" layoutX="443.0" layoutY="245.0" />
+                  <Label fx:id="universiteti" layoutX="176.0" layoutY="14.0" prefHeight="30.0" prefWidth="251.0" text="Universiteti i Prishtinës">
                      <font>
                         <Font name="Cambria" size="18.0" />
                      </font>
                   </Label>
                   <Label layoutX="328.0" layoutY="249.0" prefHeight="18.0" prefWidth="134.0" text="Automatike :" />
                   <Label layoutX="14.0" layoutY="249.0" prefHeight="18.0" prefWidth="160.0" text="Elektronike :" />
-                  <TextField layoutX="153.0" layoutY="148.0" />
-                  <TextField layoutX="443.0" layoutY="148.0" />
-                  <Label layoutX="14.0" layoutY="152.0" prefHeight="18.0" prefWidth="96.0" text="Viti i pare :" />
+                  <TextField fx:id="txtViti1" layoutX="156.0" layoutY="148.0" />
+                  <TextField fx:id="txtViti2" layoutX="443.0" layoutY="148.0" />
+                  <Label layoutX="14.0" layoutY="152.0" prefHeight="18.0" prefWidth="96.0" text="Viti i parë :" />
                   <Label layoutX="14.0" layoutY="192.0" prefHeight="18.0" prefWidth="89.0" text="Viti i trete:" />
-                  <Label layoutX="329.0" layoutY="152.0" prefHeight="18.0" prefWidth="89.0" text="Viti i dyte:" />
-                  <Label layoutX="329.0" layoutY="192.0" prefHeight="18.0" prefWidth="74.0" text="Viti i katert :" />
-                  <Label layoutX="14.0" layoutY="290.0" prefHeight="18.0" prefWidth="146.0" text="Elektoenergjetike :" />
+                  <Label layoutX="329.0" layoutY="152.0" prefHeight="18.0" prefWidth="89.0" text="Viti i dytë:" />
+                  <Label layoutX="329.0" layoutY="192.0" prefHeight="18.0" prefWidth="74.0" text="Viti i katërt :" />
+                  <Label layoutX="14.0" layoutY="290.0" prefHeight="18.0" prefWidth="146.0" text="Elektroenergjetike :" />
                   <Label layoutX="326.0" layoutY="290.0" text="Telekomunikacion :" />
-                  <TextField layoutX="156.0" layoutY="286.0" />
-                  <TextField layoutX="443.0" layoutY="286.0" />
-                  <Label layoutX="229.0" layoutY="30.0" prefHeight="18.0" prefWidth="112.0" text="RAPORT">
+                  <TextField fx:id="txtElektroenergjetike" layoutX="156.0" layoutY="286.0" />
+                  <TextField fx:id="txtTelekomunikacion" layoutX="443.0" layoutY="286.0" />
+                  <Label fx:id="raport" layoutX="235.0" layoutY="38.0" prefHeight="18.0" prefWidth="112.0" text="RAPORT">
                      <font>
                         <Font name="Calibri" size="18.0" />
                      </font>
                   </Label>
                   <Label layoutX="14.0" layoutY="327.0" prefHeight="18.0" prefWidth="160.0" text="Inxhinieri Kompjuterike :" />
-                  <TextField layoutX="156.0" layoutY="323.0" />
-                  <TextField layoutX="156.0" layoutY="407.0" />
-                  <TextField layoutX="443.0" layoutY="407.0" />
+                  <TextField fx:id="txtKompjuterike" layoutX="156.0" layoutY="323.0" />
+                  <TextField fx:id="txtMeshkuj" layoutX="156.0" layoutY="407.0" />
+                  <TextField fx:id="txtFemra" layoutX="443.0" layoutY="407.0" />
                   <Label layoutX="22.0" layoutY="411.0" prefHeight="18.0" prefWidth="134.0" text="Student meshkuj :" />
                   <Label layoutX="324.0" layoutY="411.0" prefHeight="18.0" prefWidth="122.0" text="Studente femra :" />
-                  <Button layoutX="174.0" layoutY="541.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="134.0" text="Gjenero te dhenat" />
-                  <Button accessibleRole="HYPERLINK" layoutX="339.0" layoutY="541.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="134.0" text="Ruaj te dhenat" />
-                  <TextField layoutX="153.0" layoutY="188.0" />
+                  <Button fx:id="gjenero" layoutX="174.0" layoutY="541.0" mnemonicParsing="false" onAction="#Btngjenero" prefHeight="32.0" prefWidth="134.0" text="Gjenero të dhënat" />
+                  <Button fx:id="ruaj" accessibleRole="HYPERLINK" layoutX="339.0" layoutY="541.0" mnemonicParsing="false" onAction="#handleSaveClicked" prefHeight="32.0" prefWidth="134.0" text="Ruaj të dhënat" />
+                  <TextField fx:id="txtViti3" layoutX="156.0" layoutY="188.0" />
+                  <TextField fx:id="txtNumriTotal" layoutX="276.0" layoutY="93.0" />
                </children>
             </AnchorPane>
-        </items>
+         </items>
       </SplitPane>
    </children>
 </AnchorPane>
