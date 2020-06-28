@@ -1,28 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.PointLight?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="WriteMessageControl">
+<AnchorPane style="-fx-background-image: C:\Users\Lindë Imeri\eclipse-workspace\StudentManager\src\cont.jpg&quot;);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="WriteMessageControl">
    <children>
-      <AnchorPane layoutX="-121.0" layoutY="-96.0" prefHeight="400.0" prefWidth="600.0">
+      <AnchorPane layoutX="-3.0" layoutY="7.0" prefHeight="651.0" prefWidth="877.0" style="-fx-background-image: C:\Users\Lindë Imeri\eclipse-workspace\StudentManager\src\cont.jpg&quot;);">
          <children>
-            <ColorPicker fx:id="colorpicker" editable="true" layoutX="132.0" layoutY="101.0" onAction="#changecolor" prefHeight="25.0" prefWidth="100.0" promptText="TextColor" />
-            <TextArea fx:id="textarea" layoutX="124.0" layoutY="220.0" prefHeight="98.0" prefWidth="461.0" style="-fx-background-color: #3583ff;" />
-            <Text fx:id="mytext" layoutX="132.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shkruani mesazhin me poshte" textAlignment="CENTER" wrappingWidth="461.3333333333332">
+            <TextArea fx:id="textarea" layoutX="80.0" layoutY="388.0" maxHeight="40.0" maxWidth="710.0" prefHeight="40.0" prefWidth="710.0" promptText="Shkruaj mesazhin" style="-fx-background-color: #3583ff; -fx-font-size: 34;">
                <font>
-                  <Font size="22.0" />
+                  <Font size="14.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Shkruaj mesazhin ketu" />
+               </tooltip></TextArea>
+            <Text fx:id="mytext" layoutX="79.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nese keni ndonje pyetje , keshille apo sygjerim mund te na shkruani ne kutine me poshte" wrappingWidth="711.3333333333334">
+               <font>
+                  <Font size="15.0" />
                </font>
             </Text>
-            <Button fx:id="dergo" layoutX="276.0" layoutY="333.0" mnemonicParsing="false" onAction="#dergo" prefHeight="44.0" prefWidth="139.0" style="-fx-background-color: #3583ff;" text="Dergo" textAlignment="CENTER">
+            <Button fx:id="dergo" layoutX="80.0" layoutY="558.0" mnemonicParsing="false" onAction="#dergo" prefHeight="44.0" prefWidth="251.0" style="-fx-background-color: #3583ff;" text="Dergo">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
+            <PointLight color="CHARTREUSE" layoutX="182.0" layoutY="185.0" lightOn="true" />
+            <ToolBar layoutX="80.0" layoutY="304.0" prefHeight="41.0" prefWidth="711.0">
+               <items>
+                  <ColorPicker fx:id="colorpicker" editable="true" onAction="#changecolor" prefHeight="31.0" prefWidth="102.0" promptText="TextColor">
+                     <tooltip>
+                        <Tooltip text="Ndrysho ngjyren e kornizes dhe tekstit" />
+                     </tooltip>
+                  </ColorPicker>
+                  <ImageView onMouseClicked="#BoldText">
+                     <image>
+                        <Image url="@../../../Desktop/Viti%20i%20Dyte/Semestri%202/Komunikimi%20Njeri-Kompjuter/Student%20Manager/src/image/Bold_25px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView onMouseClicked="#italicText">
+                     <image>
+                        <Image url="@../../../Desktop/Viti%20i%20Dyte/Semestri%202/Komunikimi%20Njeri-Kompjuter/Student%20Manager/src/image/Italic_25px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="33.0" onMouseClicked="#underline">
+                     <image>
+                        <Image url="@../../../Desktop/Viti%20i%20Dyte/Semestri%202/Komunikimi%20Njeri-Kompjuter/Student%20Manager/src/image/Underline_25px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView onMouseClicked="#SetLeft">
+                     <image>
+                        <Image url="@../../../Desktop/Viti%20i%20Dyte/Semestri%202/Komunikimi%20Njeri-Kompjuter/Student%20Manager/src/image/Align%20Left_25px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView onMouseClicked="#SetCenter">
+                     <image>
+                        <Image url="@../../../Desktop/Viti%20i%20Dyte/Semestri%202/Komunikimi%20Njeri-Kompjuter/Student%20Manager/src/image/Align%20Center_25px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView onMouseClicked="#SetRight">
+                     <image>
+                        <Image url="@../../../Desktop/Viti%20i%20Dyte/Semestri%202/Komunikimi%20Njeri-Kompjuter/Student%20Manager/src/image/Align%20Right_25px.png" />
+                     </image>
+                  </ImageView>
+                  <Slider fx:id="TextSizeSlider" onDragDetected="#ChangeTextSize" snapToTicks="true" />
+               </items>
+            </ToolBar>
+            <ImageView fitHeight="288.0" fitWidth="879.0" layoutX="-1.0" layoutY="-8.0">
+               <image>
+                  <Image url="@cont.jpg" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>
