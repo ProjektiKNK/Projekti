@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -13,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="panemyprofileedit" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="872.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controllers.editProfileController">
+<AnchorPane fx:id="panemyprofileedit" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="872.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="editProfileController">
    <children>
       <GridPane layoutX="204.0" layoutY="196.0" prefHeight="403.0" prefWidth="554.0">
          <columnConstraints>
@@ -30,7 +28,6 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <DatePicker prefHeight="21.0" prefWidth="198.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Label prefHeight="34.0" prefWidth="114.0" text="Email Address" textAlignment="CENTER">
                <font>
                   <Font name="Eras Light ITC" size="18.0" />
@@ -46,28 +43,21 @@
                   <Font name="Eras Light ITC" size="18.0" />
                </font>
             </Label>
-            <Label text="Birthday" GridPane.rowIndex="4">
+            <Label text="Address" GridPane.rowIndex="4">
                <font>
                   <Font name="Eras Light ITC" size="18.0" />
                </font>
             </Label>
-            <TextField prefHeight="30.0" prefWidth="290.0" text="mergograiqevci@gmail.com" GridPane.columnIndex="1" />
             <TextField disable="true" prefHeight="32.0" prefWidth="290.0" text="180717100030" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField prefHeight="32.0" prefWidth="290.0" text="+38344953980" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Label text="Password" GridPane.rowIndex="1">
                <font>
                   <Font name="Eras Light ITC" size="18.0" />
                </font>
             </Label>
-            <PasswordField prefHeight="31.0" prefWidth="290.0" text="okqtokqwtoq" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="62.0" style="-fx-background-color: #387baf; -fx-background-radius: 15;" text="Save" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="6">
-               <font>
-                  <Font size="15.0" />
-               </font></Button>
-            <Button mnemonicParsing="false" prefHeight="29.0" prefWidth="75.0" style="-fx-background-color: #387baf; -fx-background-radius: 15;" text="Cancel" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6">
-               <font>
-                  <Font size="15.0" />
-               </font></Button>
+            <Button mnemonicParsing="false" onAction="#NdryshoEmailAdresen" prefHeight="43.0" prefWidth="132.0" text="Ndrysho" GridPane.columnIndex="1" />
+            <Button layoutX="182.0" layoutY="21.0" mnemonicParsing="false" onAction="#NdryshoFjalekalimin" prefHeight="43.0" prefWidth="132.0" text="Ndrysho" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button layoutX="182.0" layoutY="87.0" mnemonicParsing="false" onAction="#NdryshoNumrinETelefonit" prefHeight="43.0" prefWidth="132.0" text="Ndrysho" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button layoutX="182.0" layoutY="219.0" mnemonicParsing="false" onAction="#NdryshoAdresen" prefHeight="43.0" prefWidth="132.0" text="Ndrysho" GridPane.columnIndex="1" GridPane.rowIndex="4" />
          </children>
       </GridPane>
       <ImageView fitHeight="78.0" fitWidth="123.0" layoutX="397.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
@@ -75,14 +65,14 @@
             <Image url="@../../images/editimg.png" />
          </image>
       </ImageView>
-      <Label layoutX="158.0" layoutY="159.0" text="Personal Details" textAlignment="CENTER">
+      <Label layoutX="204.0" layoutY="158.0" text="Personal Details" textAlignment="CENTER">
          <font>
             <Font name="Eras Medium ITC" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="373.0" layoutY="97.0" prefHeight="34.0" prefWidth="126.0" text=" MY PROFILE-EDIT">
+      <Label layoutX="226.0" layoutY="97.0" prefHeight="34.0" prefWidth="273.0" text=" MY PROFILE-EDIT">
          <font>
-            <Font name="System Bold" size="14.0" />
+            <Font name="System Bold" size="16.0" />
          </font>
       </Label>
       <ImageView fx:id="goback" fitHeight="93.0" fitWidth="62.0" layoutX="796.0" layoutY="14.0" onMouseClicked="#onBackClicked" pickOnBounds="true" preserveRatio="true">
