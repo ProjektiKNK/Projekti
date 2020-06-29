@@ -5,16 +5,37 @@
 	-fx-background-color:transparent;
 }
 .table-row-cell:odd{
-	-fx-background-color:blue;
+	-fx-font-weight: bold;
+	-fx-text-fill:white;
+	-fx-background-color:LightSteelBlue;
 }
 .table-row-cell:even{
-	-fx-background-color:red;
+    -fx-font-weight: bold;
+	-fx-text-fill:black;
+	-fx-background-color:white;
 }
 .table-view .column-header .label {
     -fx-text-fill: white;
     -fx-font-weight: bold;
 }
 .table-view .column-header  {
-    -fx-background-color:indigo; 
+	-fx-cell-size: 17px;
+    -fx-background-color:MidnightBlue; 
     
+}
+.table-row{
+	
+    line-height: 20px;
+}
+.table-row-cell {
+    -fx-cell-size: 17px;
+    -fx-font-size:10px;
+}
+.table-row-cell:selected {-fx-background-color: SteelBlue;}
+
+#butoni { 
+    -fx-background-image: url('/images/oj.png');
+    -fx-background-size: 28px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 90%;
 }
