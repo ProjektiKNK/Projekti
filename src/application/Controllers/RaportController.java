@@ -254,5 +254,27 @@ public class RaportController {
 
       
     }
+		 
+
+    @FXML
+    private void handleSaveClicked() {
+        ruaj.setVisible(false);
+        gjenero.setVisible(false);
+
+        Printer printer = Printer.getDefaultPrinter();
+        PageLayout pageLayout = printer.createPageLayout(Paper.A4,
+                PageOrientation.PORTRAIT, Printer.MarginType.HARDWARE_MINIMUM);
+        PrinterJob job = PrinterJob.createPrinterJob();
+        if (job != null && job.showPrintDialog(anch.getScene().getWindow())) {
+            boolean success = job.printPage(pageLayout, anch);
+            if (success) {
+                job.endJob();
+            }
+        }
+        ruaj.setVisible(false);
+        gjenero.setVisible(false);
+    }
+}
+
 
 }
