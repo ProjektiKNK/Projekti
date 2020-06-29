@@ -204,6 +204,7 @@ butoni.setOnAction(event);
           ResultSet rs;
 	  try {
 	     if(String.valueOf(txtFilter.getText()).isEmpty())
+	     {
              oblist.removeAll(oblist);
 	     rs = conn.createStatement().executeQuery(subquery);
 	     while (rs.next())	 {
@@ -502,7 +503,7 @@ alert.showAndWait();
 
 }
    
-}
+
 
    
     
@@ -522,7 +523,6 @@ alert.showAndWait();
     tableview.setItems(oblist);
     choicebox.getItems().addAll(lista);  
     edito();
-    	combobox();
     	
     }
 
