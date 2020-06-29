@@ -126,5 +126,133 @@ public class RaportController {
     	}
 	
     }
+	 public void Btngjenero(ActionEvent actionEvent) throws SQLException {
+
+        Connection conn = DatabaseConnection.getConnection();
+
+        ResultSet res;
+        PreparedStatement pst;
+        try {
+            String query = "select count(*) as 'Totali' from studentet";
+            pst = conn.prepareStatement(query);
+            res = pst.executeQuery();
+            while (res.next()) {
+                String rez = res.getString("Totali");
+                txtNumriTotal.setText(rez);
+            }
+
+
+            //Viti i pare
+
+            String query1 = "select count(*) as 'Totali' from studentet s where s.ssemestri = 1 or s.ssemestri = 2";
+            pst = conn.prepareStatement(query1);
+            res = pst.executeQuery();
+            while (res.next()) {
+                String rez = res.getString("Totali");
+                txtViti1.setText(rez);
+            }
+
+
+            //Viti i dyte
+
+            String query2 = "select count(*) as 'Totali' from studentet s where s.ssemestri = 3 or s.ssemestri = 4";
+            pst = conn.prepareStatement(query2);
+            res = pst.executeQuery();
+            while (res.next()) {
+                String rez = res.getString("Totali");
+                txtViti2.setText(rez);
+            }
+
+
+            //Viti i trete
+            String query3 = "select count(*) as 'Totali' from studentet s where s.ssemestri = 5 or s.ssemestri = 6";
+            pst = conn.prepareStatement(query3);
+            res = pst.executeQuery();
+            while (res.next()) {
+                String rez = res.getString("Totali");
+                txtViti3.setText(rez);
+            }
+
+
+            //Viti i katert
+            String query4 = "select count(*) as 'Totali' from studentet s where s.ssemestri = 7 or s.ssemestri = 8";
+            pst = conn.prepareStatement(query4);
+            res = pst.executeQuery();
+            while (res.next()) {
+                String rez = res.getString("Totali");
+                txtViti4.setText(rez);
+            }
+
+
+            //Inxhinieri Kompjuterike
+            String query5 = "select count(*) as 'Totali' from studentet s where s.sdrejtimi = 1";
+            pst = conn.prepareStatement(query5);
+            res = pst.executeQuery();
+            while (res.next()) {
+                String rez = res.getString("Totali");
+                txtKompjuterike.setText(rez);
+            }
+
+
+            //Telekomunikacion
+
+            String query6 = "select count(*) as 'Totali' from studentet s where s.sdrejtimi = 3";
+            pst = conn.prepareStatement(query6);
+            res = pst.executeQuery();
+            while (res.next()) {
+                String rez = res.getString("Totali");
+                txtTelekomunikacion.setText(rez);
+            }
+
+            //Elektroenergjetike
+            String query7 = "select count(*) as 'Totali' from studentet s where s.sdrejtimi = 2";
+            pst = conn.prepareStatement(query7);
+            res = pst.executeQuery();
+            while (res.next()) {
+                String rez = res.getString("Totali");
+                txtElektroenergjetike.setText(rez);
+            }
+
+
+            //Elektronike
+            String query8 = "select count(*) as 'Totali' from studentet s where s.sdrejtimi = 4";
+            pst = conn.prepareStatement(query8);
+            res = pst.executeQuery();
+            while (res.next()) {
+                String rez = res.getString("Totali");
+                txtElektronike.setText(rez);
+            }
+
+
+            //Automatike
+            String query9 = "select count(*) as 'Totali' from studentet s where s.sdrejtimi = 5";
+            pst = conn.prepareStatement(query9);
+            res = pst.executeQuery();
+            while (res.next()) {
+                String rez = res.getString("Totali");
+                txtAutomatike.setText(rez);
+            }
+
+
+            //Gjithesejt meshkuj
+            String query11 = "select count(*) as 'Totali' from studentet s where s.sgjinia = 'M'";
+            pst = conn.prepareStatement(query11);
+            res = pst.executeQuery();
+            while (res.next()) {
+                String rez = res.getString("Totali");
+                txtMeshkuj.setText(rez);
+            }
+
+            //gjithesejt femra
+            String query12 = "select count(*) as 'Totali' from studentet s where s.sgjinia = 'F'";
+            pst = conn.prepareStatement(query12);
+            res = pst.executeQuery();
+            while (res.next()) {
+                String rez = res.getString("Totali");
+                txtFemra.setText(rez);
+            }
+
+      
+    }
 
 }
