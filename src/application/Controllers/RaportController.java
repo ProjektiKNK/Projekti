@@ -1,7 +1,18 @@
 package application.Controllers;
-
+import javafx.event.ActionEvent;
+import javafx.print.PageLayout;
+import javafx.print.PageOrientation;
+import javafx.print.Paper;
+import javafx.print.Printer;
+import javafx.print.PrinterJob;
+import javafx.scene.control.Button;
+import java.sql.SQLException;
+import java.sql.*;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import javafx.scene.control.TextField;
+import javax.swing.*;
 import java.io.IOException;
-
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
@@ -10,8 +21,11 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 public class RaportController {
-	@FXML
-	private AnchorPane anchorPane;
+    @FXML
+    private AnchorPane anchorPane;
+	
+    @FXML
+    private AnchorPane anch;
 
     @FXML
     private Label registerStudents;
@@ -251,7 +265,9 @@ public class RaportController {
                 String rez = res.getString("Totali");
                 txtFemra.setText(rez);
             }
-
+             } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Gabim gjate ekzekutimit!!!");
+        }
       
     }
 		 
@@ -276,5 +292,3 @@ public class RaportController {
     }
 }
 
-
-}
