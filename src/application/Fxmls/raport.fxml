@@ -132,7 +132,7 @@
                   </Label>
                </children>
             </AnchorPane>
- <AnchorPane accessibleRole="BUTTON" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="526.0" minWidth="162.0" prefHeight="652.0" prefWidth="626.0">
+ <AnchorPane fx:id="anch" accessibleRole="BUTTON" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="526.0" minWidth="162.0" prefHeight="652.0" prefWidth="626.0">
                <children>
                   <Label layoutX="52.0" layoutY="96.0" prefHeight="18.0" prefWidth="239.0" text="Numri i studentëve të regjistruar në UP :" />
                   <ImageView fitHeight="93.0" fitWidth="134.0" layoutX="486.0" layoutY="14.0">
