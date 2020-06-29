@@ -1,9 +1,11 @@
 package application.Controllers;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 import javax.swing.JOptionPane;
@@ -15,15 +17,20 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import application.DatabaseConnection;
 import javafx.scene.control.Alert;
 
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonBar.ButtonData;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Dialog;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TablePosition;
 import javafx.scene.control.TableView;
@@ -32,7 +39,10 @@ import javafx.scene.control.TextInputDialog;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
+import javafx.util.Pair;
 
 public class EditController implements Initializable {
 
@@ -58,19 +68,17 @@ public class EditController implements Initializable {
 	@FXML
 	private ImageView contact1;
 
-    @FXML
+        @FXML
 	private ImageView settingsHelp1;
 
 	@FXML
 	private ImageView sendMessage1;
 
-    @FXML
+        @FXML
 	private Label editmyProfile1;
-    @FXML
-    private Label label;
-   
-    @FXML
-    private TableView  tableview;
+        @FXML
+        private Label label;
+  
         @FXML
     private TableView<ModelTable> tableview;
     
@@ -108,8 +116,6 @@ public class EditController implements Initializable {
     @FXML
     private Button fshije;
    
-    @FXML
-    private ComboBox<String> choicebox;
     @FXML
     private void combobox() {
     	
@@ -358,13 +364,13 @@ butoni.setOnAction(event);
 	 PreparedStatement statement = conn.prepareStatement("DELETE FROM studentet WHERE sid = ?");
 	 statement.setString(1, selectedPerson.getId());
 	 statement.executeUpdate();
-	 System.out.print(i);
-	 Alert alert = new Alert(AlertType.INFORMATION);
-	 alert.setTitle("Information Dialog");
-	 alert.setHeaderText(null);
-	 alert.setContentText("U fshi user i selektuar !");
+	Alert alert = new Alert(AlertType.INFORMATION);
+alert.setTitle("Information Dialog");
+alert.setHeaderText(null);
+alert.setContentText("U fshi studenti i selektuar !");
 
-	 alert.showAndWait();
+alert.showAndWait();
+tableview.getItems().removeAll(tableview.getSelectionModel().getSelectedItem());
 	 tableview.getItems().removeAll(tableview.getSelectionModel().getSelectedItem());
 							  
 							   
@@ -373,10 +379,130 @@ butoni.setOnAction(event);
 	Alert alert = new Alert(AlertType.INFORMATION);
 	alert.setTitle("Information Dialog");
 	alert.setHeaderText(null);
-	alert.setContentText("Gabim gjate kerkimi!");
+	alert.setContentText("Selektoni studentin qe doni ta fshini");
 	alert.showAndWait();
 	}    
 	 }
+
+
+public void actionPerformed(ActionEvent e)
+{
+try {
+
+
+Connection conn= DatabaseConnection.getConnection();
+
+ModelTable selectedPerson = tableview.getSelectionModel().getSelectedItem();
+
+ 
+
+try {
+
+  String i= selectedPerson.getId();
+  String sql = "select * from studentet where sid='" + i + "'";
+PreparedStatement pst = conn.prepareStatement(sql);
+ResultSet res = pst.executeQuery();
+while (res.next()) {
+Dialog<Pair<String, String>> dialog = new Dialog<>();
+GridPane grid = new GridPane();
+grid.setHgap(10);
+grid.setVgap(10);
+grid.setPadding(new Insets(20, 150, 10, 10));
+
+TextField username = new TextField();
+username.setPromptText("Emri");
+username.setText(res.getString("semri"));
+TextField mbiemri = new TextField();
+mbiemri.setPromptText("Mbiemri");
+mbiemri.setText(res.getString("smbiemri"));
+TextField email = new TextField();
+email.setPromptText("Email");
+email.setText(res.getString("semail"));
+TextField tel = new TextField();
+tel.setPromptText("Tel");
+tel.setText(res.getString("stel"));
+
+grid.add(new Label("Emri:"), 0, 0);
+grid.add(username, 1, 0);
+grid.add(new Label("Mbiemri:"), 0, 1);
+grid.add(mbiemri, 1, 1);
+grid.add(new Label("Email:"), 0, 2);
+grid.add(email, 1, 2);
+grid.add(new Label("Tel:"), 0, 3);
+grid.add(tel, 1, 3);
+dialog.setTitle("Edito");
+
+  ButtonType loginButtonType = new ButtonType("Update", ButtonData.OK_DONE);
+  dialog.getDialogPane().getButtonTypes().addAll(loginButtonType, ButtonType.CANCEL);
+  dialog.setResultConverter(dialogButton -> {
+   if (dialogButton == loginButtonType) {
+    String sqll = "UPDATE studentet SET semri='" + username.getText() + "', " + "smbiemri='"
++ mbiemri.getText() + "',"
++ "stel ='" + tel.getText() + "'," + "semail ='" + email.getText()
++ "' where sid='" + selectedPerson.getId() + "'";
+PreparedStatement pstt;
+try {
+pstt = conn.prepareStatement(sqll);
+pstt.execute();
+
+pstt.close();
+} catch (SQLException e1) {
+// TODO Auto-generated catch block
+e1.printStackTrace();
+}
+oblist.removeAll(oblist);
+ResultSet rs;
+try {
+rs = conn.createStatement().executeQuery("Select * from studentet");
+
+  while (rs.next()) {
+  oblist.add(new ModelTable(rs.getString("sid"),rs.getString("semri"),rs.getString("sprindi"),rs.getString("smbiemri"),rs.getString("sfakulteti"),rs.getString("sqyteti"),rs.getString("snrpersonal"),rs.getString("sadresa"),rs.getString("stel"),rs.getString("semail"),rs.getString("sgjinia")));
+  }
+ 
+  Alert alert = new Alert(AlertType.INFORMATION);
+  alert.setTitle("Information Dialog");
+  alert.setHeaderText(null);
+  alert.setContentText("Te dhenat per studentin "+ selectedPerson.getId()+" u ndryshuan .");
+
+  alert.showAndWait();
+}
+
+catch (SQLException e1) {
+// TODO Auto-generated catch block
+e1.printStackTrace();
+}
+   }
+   return null;
+});
+
+dialog.getDialogPane().setContent(grid);
+Optional<Pair<String, String>> result = dialog.showAndWait();
+
+}
+pst.close();
+} 
+catch (Exception x) {
+Alert alert = new Alert(AlertType.INFORMATION);
+alert.setTitle("Information Dialog");
+alert.setHeaderText(null);
+alert.setContentText("Eshte shfaur nje gabim!\nSelekto dhe edito nje student .");
+
+alert.showAndWait();
+}
+
+} 
+catch (Exception o) {
+Alert alert = new Alert(AlertType.INFORMATION);
+alert.setTitle("Information Dialog");
+alert.setHeaderText(null);
+alert.setContentText("Selekto dhe edito nje student");
+
+alert.showAndWait();
+}
+
+}
+   
+}
 
    
     
