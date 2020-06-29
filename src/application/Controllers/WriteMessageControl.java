@@ -51,10 +51,10 @@ public class WriteMessageControl implements Initializable {
 
 	@FXML
 	void dergo(ActionEvent event) {
-		try{Mailer.send("sems.noreply@gmail.com", "spms12345", "linndaimmeri@gmail.com", "", textarea.getText());
+		try{Mailer.send("linndaimmeri@gmail.com", "Go#Google312", "linndaimmeri@gmail.com", "", textarea.getText());
 		textarea.setText("");}
 		catch (Exception e) {
-			// TODO: handle exception
+			
 		}
 	}
 
