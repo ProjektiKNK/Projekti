@@ -10,7 +10,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 
-public class mainn extends Application {
+public class MainEditDelete extends Application {
 	@Override
 	public void start(Stage primaryStage) throws IOException {
 		 URL url = getClass().getResource("EditDeleteUser.fxml");
@@ -26,7 +26,7 @@ public class mainn extends Application {
 	       
 	     
 	     Scene scene=new Scene(parent);
-	   scene.getStylesheets().add("/CSS/style.css");
+	   scene.getStylesheets().add("/Css/style.css");
 	   
 			
 			primaryStage.setScene(scene);
